@@ -1,0 +1,24 @@
+version: '3'
+services:
+  #app onde o app do nodejs vai rodar
+  app:
+    container_name: docker-node-mongo
+    #se o container reiniciar reiniciar o serviço
+    restart: always
+    #para construir a imagem ele vai procurar pelo Dockerfile onde? no diretório raiz .
+    build: .
+    #mapeia a porta 80 do computador local na porta 3000 do container
+    ports:
+      - '80:3000'  
+    #cria um link com o container mongo para poder se comunicar com mongo
+    links:
+      - mongo
+  #banco de dados mongodb
+  mongo:
+    container_name: mongo
+    #vai baixar a imagem do mongo do dockerhub tire o :4.1.1 se quiser baixar a última versão
+    #usando a última versão com container pode ser que o processador não seja capaz de rodar por isso deixe em container 4.1.1
+    #MongoDB 5.0+ requires a CPU with AVX support, and your current system does not appear to have that!
+    image: mongo:4.1.1
+    ports:
+      - '27017:27017'
