@@ -5,8 +5,10 @@ const app = express();
 
 const mongoose = require('mongoose');
 
-//mongo:27017 mongo é o nome do container
-mongoose.connect('mongodb://mongo:27017/nodeApp',{ useNewUrlParser: true, useUnifiedTopology: true })
+//CONTAINER mongo:27017 mongo é o nome do container
+//mongoose.connect('mongodb://mongo:27017/nodeApp',{ useNewUrlParser: true, useUnifiedTopology: true })
+//LOCALHOST
+mongoose.connect('mongodb://localhost:27017/nodeApp',{ useNewUrlParser: true, useUnifiedTopology: true })
 .then(() => {
     console.log("CONNECTION OPEN!!!");
 })
