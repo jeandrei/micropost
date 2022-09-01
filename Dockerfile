@@ -25,14 +25,14 @@ WORKDIR /usr/src/app
 
 #copia o arquivo package.jason no diretório do app /usr/src/app pois em package.jason é onde tem as dependencias
 #que serão instaladas com o comando npm install
-COPY package*.json ./
+COPY /app/package*.json ./
 
 #instala o app npm install instala todas as dependências que estão no arquivo package.json
 RUN npm install
 
 #copia todo o resto da pasta raiz do app para a pasta do container docker
 #copia tudo do localhost meu app para o container docker /usr/src/app
-COPY . .
+COPY /app ./
 
 #expoe a porta do container que vai rodar o sistema
 EXPOSE 3000

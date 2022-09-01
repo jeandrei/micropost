@@ -17,7 +17,7 @@ mongoose.connect('mongodb://mongo:27017/nodeApp',{ useNewUrlParser: true, useUni
 
 
 app.get('/', (req, res) => {
-    res.send("SISTEMA CARREGADO");
+    res.send("SISTEMA CARREGADO SHOW");
 })
 
 
