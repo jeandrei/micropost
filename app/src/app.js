@@ -2,9 +2,19 @@
 /**
  * To run the app
  * 1 - install the dependency
- * npm install
- * 2 - Run the json server 
- * npm run json:server
+ *    npm install
+ *    se ao dar o comando npm install der o erro 
+ *    found 1 high severity vulnerability
+ *    de o comando 
+ *    npm set audit false
+ * 2 - build the ES5
+ *    npm run build
+ *    it is gonna create a the folder build inside the file to run the app in ES5
+ * 3 - Run the json server 
+ *    npm run json:server
+ * 4 - Start the server
+ *    npm start
+ * 
  */
 import { http } from './http';
 
