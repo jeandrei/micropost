@@ -1,30 +1,27 @@
+/*
+How to start the fake api json server
+in this current folder api
+install json-server
+    npm install -g json-server
+run the command to watch the db.json file
+    json-server --watch db.json
+now check if it is running at
+    http://localhost:3000/posts
 
-/**
- * To run the app
- * 1 - install the dependency
- *    npm install
- *    se ao dar o comando npm install der o erro 
- *    found 1 high severity vulnerability
- *    de o comando 
- *    npm set audit false
- * 2 - build the ES5
- *    npm run build
- *    it is gonna create a the folder build inside the file to run the app in ES5
- * 3 - Run the json server 
- *    npm run json:server
- * 4 - Start the server
- *    npm start
- * 
- */
-import { http } from './http';
 
-import { ui } from './ui';
+To run the app don't need nodejs
+just open the index.html
+*/
 
+const http = new EasyHTTP();
+
+const ui = new UI();
 
 // Get posts on DOM load
 document.addEventListener('DOMContentLoaded', getPosts);
 
 // Listen for add post
+//
 document.querySelector('.post-submit').addEventListener('click', submitPost);
 
 // Listen for delete

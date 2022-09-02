@@ -57,6 +57,3 @@
 
 
 }
-
-
-export const http = new EasyHTTP();
