@@ -1,0 +1,101 @@
+<!-- 
+  MATERIALIZE https://materializecss.com/
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <!-- MATERIALIZE CSS FRAMEWORK -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">  
+   <!-- FONTAWESOME -->
+   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+   <title>Tracalorie | Meal & Calorie Tracker</title>
+ </head>
+ <body>
+   <!-- Navbar -->
+   <nav>
+     <div class="nav-wrapper blue">
+       <div class="container">
+         <a href="#" class="brand-logo center">Micropost</a>         
+       </div>
+     </div>
+   </nav>
+ 
+   <br>
+ 
+   <div class="container">
+    <div id="message">
+
+      <div class="alert alert-danger">Teste</div>
+    </div>
+     <!-- Form Card -->
+     <div class="card">
+       <div class="card-content">
+         <span class="card-title">Add Post</span>
+         <form class="col">
+            
+            
+
+            <div class="input-field col s6">
+              <input id="postTitle" type="text" placeholder="Post Title">
+              <label for="postTitle">Title</label>
+            </div>
+
+            <div class="input-field">
+              <textarea id="postBody" class="materialize-textarea" placeholder="Post Text"></textarea>
+              <label for="postBody">Text</label>
+            </div><!-- row -->            
+
+            
+            <button class="addBtn btn blue darken-3"><i class="fa fa-plus"></i> Add Post</button>    
+
+            <button class="updateBtn btn orange"><i class="fa fa-pencil-square-o"></i> Update Post</button>
+
+            <button class="deleteBtn btn red"><i class="fa fa-remove"></i> Delete Post</button>     
+
+            <button type="button" class="backBtn btn grey pull-right"><i class="fa fa-chevron-circle-left"></i> Back</button>
+                  
+         
+          </form>
+       </div>
+     </div>
+    
+ 
+    
+     <div id="posts">
+        <!-- <div class="col s12 m7">       
+          <div class="card horizontal">        
+            <div class="card-stacked">
+              <h4 class="header">Post Title</h4>
+              <div class="card-content">
+                <p>Post text</p>
+              </div>
+              <div class="card-action">
+                <a href="#" class="secondary-content">
+                  <i class="edit-item fa fa-pencil"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>    -->
+    </div>
+     
+   </div>
+ 
+   <!-- JQUERY -->
+   <script
+   src="https://code.jquery.com/jquery-3.2.1.min.js"
+   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+   crossorigin="anonymous"></script>
+   <!-- MATERIALIZE JAVASCRIPT -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>  
+   
+   <script src="src/EasyHttp.js"></script>
+   <script src="src/storageCtrl.js"></script>
+   <script src="src/UICtrl.js"></script>
+   <script src="src/postCtrl.js"></script>
+   <script src="src/App.js"></script>
+ </body>
+ </html>
